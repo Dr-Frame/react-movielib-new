@@ -1,0 +1,17 @@
+@import "../../styles/parshals.scss";
+
+.Favorite {
+  @extend %section-padding;
+}
+.Favorite__empty {
+  @extend %movie-lists;
+}
+
+.Favorite__title {
+  @extend %section-subtitle;
+  margin-bottom: 20px;
+
+  @include for-size(tablet) {
+    margin-bottom: 30px;
+  }
+}

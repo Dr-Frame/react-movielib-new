@@ -1,0 +1,12 @@
+@import "../../styles/parshals.scss";
+
+.Homeview__title {
+  @extend %section-subtitle;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  @include for-size(tablet) {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../styles/parshals.scss";
+
+.MovieSearch__section {
+  padding-top: 10px;
+
+  @include for-size(tablet) {
+    padding-top: 20px;
+  }
+}
+.MovieSearch__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MovieSearch__label {
+}
+
+.MovieSearch__input {
+  height: 30px;
+  width: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+
+  border: none;
+  border-radius: 3px;
+  outline: none;
+
+  background-color: $light-bgc-color;
+  color: $main-text-color;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  &::placeholder {
+    /* color: $light-element-color; */
+    color: grey;
+  }
+  &:focus {
+    border: 2px solid $main-element-color;
+  }
+
+  @include for-size(tablet) {
+    width: 250px;
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 17px;
+  }
+}
+
+.MovieSearch__btn {
+  @extend %buttons;
+}

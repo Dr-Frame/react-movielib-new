@@ -1,0 +1,17 @@
+@import "../../styles/parshals.scss";
+
+.Watched {
+  @extend %section-padding;
+}
+.Watched__empty {
+  @extend %movie-lists;
+}
+
+.Watched__title {
+  @extend %section-subtitle;
+  margin-bottom: 20px;
+
+  @include for-size(tablet) {
+    margin-bottom: 30px;
+  }
+}

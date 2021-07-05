@@ -1,0 +1,61 @@
+@import "../../../styles/base.scss";
+.Crew__title {
+  @extend %section-title;
+}
+
+.Crew {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.Crew__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -5px;
+  @include for-size(tablet) {
+    margin: -15px;
+  }
+}
+.Crew__card-wrapper {
+  position: relative;
+}
+.Crew__list-card {
+  @extend %card;
+  transition: $transition;
+  @include for-size(desktop) {
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.Crew__img {
+  height: 217.5px;
+  border-radius: 3px;
+  @include for-size(tablet) {
+    height: 300px;
+  }
+}
+
+.Crew__bottom {
+  @extend %card-bottom;
+}
+.Crew__name {
+  @extend %card-name;
+}
+
+.Crew__job {
+  @extend %movie-card-span;
+  margin-bottom: 3px;
+  font-size: 12px;
+
+  @include for-size(tablet) {
+    font-size: 14px;
+  }
+}
+
+.Crew__job-name {
+  @extend %card-second-name;
+}

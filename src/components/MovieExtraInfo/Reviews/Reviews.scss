@@ -1,0 +1,59 @@
+@import "../../../styles/base.scss";
+
+.Reviews {
+  padding-bottom: 20px;
+}
+
+.Reviews__title {
+  @extend %section-title;
+}
+
+.Reviews__list {
+  margin-top: 30px;
+}
+
+.Reviews__item {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $light-bgc-color;
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+.Reviews__author {
+  @extend %movie-card-element;
+  font-size: 16px;
+  color: $light-bgc-color;
+
+  @include for-size(tablet) {
+    font-size: 17px;
+  }
+}
+
+.Reviews__author span {
+  @extend %movie-card-span;
+  font-size: 16px;
+
+  @include for-size(tablet) {
+    padding: 3px 10px;
+    font-size: 17px;
+  }
+}
+
+.Reviews__descr {
+  color: $main-text-color;
+  font-size: 14px;
+
+  @include for-size(tablet) {
+    font-size: 16px;
+  }
+}
+
+.Reviews__no-review {
+  font-size: 16px;
+  color: $light-bgc-color;
+  text-align: center;
+  font-weight: 500;
+}

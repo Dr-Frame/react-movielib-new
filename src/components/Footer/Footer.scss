@@ -1,0 +1,119 @@
+@import "../../styles/parshals.scss";
+
+.Footer {
+  margin-top: auto;
+  background-color: $main-bgc-color;
+}
+
+.Footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  @include for-size(tablet) {
+    height: 80px;
+    justify-content: space-between;
+  }
+}
+
+.Footer__author-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+  @include for-size(tablet) {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}
+
+.Footer__title {
+  font-size: 20px;
+  color: $light-bgc-color;
+
+  @include for-size(tablet) {
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+}
+.Footer__author {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: $transition;
+  color: $main-element-color;
+
+  &:hover {
+    color: $main-text-color;
+    animation: shakeX;
+  }
+
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+}
+
+.Footer__contacts {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Footer__contacts-list {
+  @include for-size(tablet) {
+    display: flex;
+  }
+}
+
+.Footer__contacts-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: $light-bgc-color;
+  margin-bottom: 5px;
+
+  @include for-size(tablet) {
+    margin-right: 20px;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.Footer__contacts-item {
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: $transition;
+  color: $main-text-color;
+
+  &:hover {
+    color: $light-bgc-color;
+  }
+}
+
+.Footer__contacts-link-text {
+  font-size: 14px;
+  @include for-size(tablet) {
+    font-size: 17px;
+  }
+}
+
+.Footer__contacts-icon {
+  font-size: 18px;
+  margin-right: 5px;
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+}
+
+.Footer__date {
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  padding-top: 5px;
+}

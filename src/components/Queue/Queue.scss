@@ -1,0 +1,17 @@
+@import "../../styles/parshals.scss";
+
+.Queue {
+  @extend %section-padding;
+}
+.Queue__empty {
+  @extend %movie-lists;
+}
+
+.Queue__title {
+  @extend %section-subtitle;
+  margin-bottom: 20px;
+
+  @include for-size(tablet) {
+    margin-bottom: 30px;
+  }
+}

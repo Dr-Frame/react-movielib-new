@@ -1,0 +1,156 @@
+@import "../../styles/parshals.scss";
+
+.MovieList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -5px;
+
+  @include for-size(desktop) {
+    margin: -10px;
+  }
+}
+
+.MovieList__img {
+  border-radius: 3px;
+}
+
+.MovieList__title {
+  @extend %movie-card-title;
+}
+
+.MovieList__in-list--added {
+  color: $main-element-color;
+}
+
+.MovieList__lists {
+  @extend %movie-card-list-icons;
+}
+
+.MovieList__lists .MovieList__in-list {
+  font-size: 20px;
+  @include for-size(tablet) {
+    font-size: 30px;
+  }
+  @include for-size(desktop) {
+    font-size: 40px;
+  }
+}
+
+.MovieList__descr {
+  @extend %movie-card-element;
+}
+.MovieList__descr span {
+  @extend %movie-card-span;
+}
+
+.MovieList__genre {
+  @extend %movie-card-span;
+  @include for-size(tablet) {
+    margin-bottom: 2px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 5px;
+  }
+}
+
+.MovieList__genres-list {
+  @extend %movie-card-genre-list;
+  @include for-size(tablet) {
+    margin-bottom: 3px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 10px;
+  }
+}
+
+.MovieList__release {
+  @extend %movie-card-element;
+}
+
+.MovieList__release span {
+  @extend %movie-card-span;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.MovieList__flip-card {
+  background-color: transparent;
+  width: 145px;
+  height: 217.5px;
+  margin: 5px;
+
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+  @include for-size(tablet) {
+    width: 165px;
+    height: 247.5px;
+  }
+
+  @include for-size(desktop) {
+    width: 240px;
+    height: 360px;
+    margin: 10px;
+  }
+}
+
+/* This container is needed to position the front and back side */
+.MovieList__flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.MovieList__flip-card:hover .MovieList__flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.MovieList__flip-card-front,
+.MovieList__flip-card-back {
+  border-radius: 3px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.MovieList__flip-card-front {
+  background-color: $main-bgc-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the back side */
+.MovieList__flip-card-back {
+  padding: 5px;
+  background-color: $light-bgc-color;
+  color: $third-bgc-color;
+  transform: rotateY(180deg);
+
+  @include for-size(tablet) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @include for-size(desktop) {
+    padding: 20px;
+  }
+}
+
+.pagination {
+  @extend %pagination;
+}
+
+.pagination__not-active-li {
+  @extend %pagination__not-active-li;
+}
+
+.pagination__active-li {
+  @extend %pagination__active-li;
+}

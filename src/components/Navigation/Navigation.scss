@@ -1,0 +1,256 @@
+@import "../../styles/parshals.scss";
+
+.Navigation__mob {
+  display: flex;
+  align-items: center;
+
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+
+.Navigation__desktop {
+  @include for-size(tablet-only) {
+    display: none;
+  }
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+
+.Navigation__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 132px;
+  font-size: 20px;
+  font-weight: 700;
+  color: $main-text-color;
+  transition: $transition;
+
+  &:hover {
+    color: $main-element-color;
+  }
+
+  @include for-size(tablet) {
+    margin-right: 480px;
+    font-size: 24px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 100px;
+  }
+}
+
+.Navigation__logo--icon {
+  margin-right: 5px;
+  font-size: 40px;
+  color: $main-element-color;
+
+  @include for-size(tablet) {
+    font-size: 50px;
+    margin-right: 15px;
+  }
+}
+
+.Navigation__btn {
+  height: 37px;
+
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+  font-size: 37px;
+  color: $main-element-color;
+  cursor: pointer;
+
+  @include for-size(tablet) {
+    height: 50px;
+    font-size: 50px;
+  }
+}
+
+.Navigation__menu-item {
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.Navigation__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  color: $third-bgc-color;
+  font-weight: 500;
+
+  @include for-size(tablet) {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+  }
+}
+
+.Navigation__link_active {
+  color: $main-element-color;
+}
+
+.MuiSvgIcon-root.Navigation__icon {
+  margin-right: 5px;
+  color: $main-element-color;
+
+  @include for-size(tablet) {
+    font-size: 34px;
+    margin-right: 10px;
+  }
+}
+
+.rc-menu__item {
+  @include for-size(tablet) {
+    width: 220px;
+  }
+}
+
+.rc-menu__divider {
+  background-color: $third-element-color;
+  opacity: 0.5;
+}
+.rc-menu__header.Navigation__devider {
+  color: $third-element-color;
+  font-weight: 500;
+
+  @include for-size(tablet) {
+    font-size: 14px;
+    padding-left: 46px;
+  }
+}
+
+// Navigation desktop
+
+.Navigation__list__desktop {
+  display: flex;
+  align-items: center;
+  margin-right: 250px;
+}
+
+.Navigation__item__desktop {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.Navigation__link__desktop {
+  position: relative;
+  color: $light-bgc-color;
+
+  font-size: 20px;
+  font-weight: 500;
+  transition: $transition;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $main-element-color;
+  }
+}
+
+.Navigation__link__desktop::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: $main-element-color;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: $transition;
+}
+
+.Navigation__link__desktop:hover::before,
+.Navigation__link__desktop:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.Navigation__link__desktop__active {
+  color: $main-element-color;
+}
+
+.Navigation__link__desktop__active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: $main-element-color;
+  transform-origin: left top;
+  transform: scale(1, 1);
+  transition: $transition;
+}
+
+//second part of nav
+
+.Navigation__movies-list__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Navigation__text {
+  position: relative;
+  @extend %movie-card-span;
+
+  background-color: $light-bgc-color;
+  color: $second-bgc-color;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.Navigation__text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: -4px;
+  height: 32px;
+  width: 2px;
+  background-color: $light-bgc-color;
+}
+
+.Navigation__movies-list {
+  display: flex;
+  align-items: center;
+}
+
+.Navigation__movies-list__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Navigation__movies-list__link {
+  position: relative;
+  color: $light-bgc-color;
+
+  font-size: 16px;
+  font-weight: 500;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $main-element-color;
+  }
+}
+
+.Navigation__movies-list__link__active {
+  color: $main-element-color;
+}

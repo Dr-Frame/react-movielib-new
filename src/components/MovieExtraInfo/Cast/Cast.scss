@@ -1,0 +1,65 @@
+@import "../../../styles/base.scss";
+
+.Cast__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -5px;
+  @include for-size(tablet) {
+    margin: -15px;
+  }
+}
+
+.Cast__title {
+  @extend %section-title;
+}
+
+.Cast {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.Cast__card-wrapper {
+  position: relative;
+}
+.Cast__img {
+  height: 217.5px;
+  border-radius: 3px;
+  @include for-size(tablet) {
+    height: 300px;
+  }
+}
+
+.Cast__bottom {
+  @extend %card-bottom;
+}
+
+.Cast__name {
+  @extend %card-name;
+}
+.Cast__char {
+  @extend %movie-card-span;
+  margin-bottom: 3px;
+  font-size: 12px;
+
+  @include for-size(tablet) {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+.Cast__char-name {
+  @extend %card-second-name;
+}
+///////
+
+.Cast__list-card {
+  @extend %card;
+  transition: $transition;
+
+  @include for-size(desktop) {
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}

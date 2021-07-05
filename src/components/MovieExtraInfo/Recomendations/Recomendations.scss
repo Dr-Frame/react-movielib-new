@@ -1,0 +1,14 @@
+@import "../../../styles/parshals.scss";
+
+.Recomendations__title {
+  @extend %section-title;
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.Recomendations__container {
+  margin-bottom: 20px;
+  @include for-size(tablet) {
+    margin-bottom: 30px;
+  }
+}
